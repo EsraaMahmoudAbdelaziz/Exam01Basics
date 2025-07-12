@@ -68,18 +68,18 @@
                 should show the result of multiplying the current number by 1 through 10.**/
 
 
-static void multiplication(int n)
-{
-    for (int i = 1; i <= n; i++)
-    {
-        Console.WriteLine($" multi of {i} * {n} = {i * n}");
-    }
-}
+//static void multiplication(int n)
+//{
+//    for (int i = 1; i <= n; i++)
+//    {
+//        Console.WriteLine($" multi of {i} * {n} = {i * n}");
+//    }
+//}
 
-Console.WriteLine("Enter number");
-int.TryParse(Console.ReadLine(), out int n);
+//Console.WriteLine("Enter number");
+//int.TryParse(Console.ReadLine(), out int n);
 
-multiplication(n);
+//multiplication(n);
 #endregion
 
 #region Q4
@@ -99,7 +99,7 @@ multiplication(n);
 //        {
 //            isPrime = false;
 //        }
-           
+
 //        else
 //        {
 //            for (int j = 2; j <= number / 2; j++)
@@ -129,4 +129,25 @@ multiplication(n);
 /***Question 5:
                 Ask the user to input 10 integers and store them in an array. Find and print the maximum value
                 and its index.***/
+
+Console.WriteLine("Enter 10 number");
+long.TryParse(Console.ReadLine(), out long numarr);
+
+int[] arr = new int[10];
+
+for (int i = 9; i >= 0; i--)
+{
+    arr[i] = (int)(numarr % 10);
+    numarr = numarr / 10;
+}
+
+Console.WriteLine("Array =");
+for (int i = 0; i < arr.Length; i++)
+{
+    Console.WriteLine(arr[i] + " ");
+  
+}
+Console.WriteLine($"max = {arr.Max()}");
+Console.WriteLine($"index of max value = {Array.IndexOf(arr, arr.Max())}");
+
 #endregion
