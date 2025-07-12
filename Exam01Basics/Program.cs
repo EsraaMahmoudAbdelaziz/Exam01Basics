@@ -68,22 +68,64 @@
                 should show the result of multiplying the current number by 1 through 10.**/
 
 
-static void multiplication(int n)
-{
-    for (int i = 1; i <= n; i++) 
-    {
-        Console.WriteLine(i);
-        for (int j = 1; j <= 10; j++)
-        {
-            Console.WriteLine($"multiplication = {i * j} ");
-        }
-    }
+//static void multiplication(int n)
+//{
+//    for (int i = 1; i <= n; i++) 
+//    {
+//        Console.WriteLine(i);
+//        for (int j = 1; j <= 10; j++)
+//        {
+//            Console.WriteLine($"multiplication = {i * j} ");
+//        }
+//    }
 
+
+//}
+
+//Console.WriteLine("Enter number");
+//int.TryParse(Console.ReadLine(), out int n);
+
+//multiplication(n);
+#endregion
+
+#region Q4
+
+/**Question 4:
+              Write a program that accepts an array of integers and counts how many of them are prime
+              numbers.**/
+
+static void primearr (int[] arr )
+{
+    for(int i = 0; i < arr.Length; i++)
+    {
+        int number = arr[i];
+        bool isPrime = true;
+
+        if (number <= 1) 
+        {
+            isPrime = false;
+        }
+           
+        else
+        {
+            for (int j = 2; j <= number / 2; j++)
+            {
+                if (number % j == 0)
+                {
+                    isPrime = false;
+                }
+            }
+        }
+
+        if (isPrime)
+            Console.WriteLine($"{number} prime");
+        else
+            Console.WriteLine($"{number} not prime");
+
+    }
 
 }
 
-Console.WriteLine("Enter number");
-int.TryParse(Console.ReadLine(), out int n);
-
-multiplication(n);
+int[] arr = { 1,2,3,4,5,6,7,8,9 };
+primearr(arr);
 #endregion
