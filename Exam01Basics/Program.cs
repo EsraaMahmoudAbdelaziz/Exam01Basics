@@ -151,3 +151,11 @@ Console.WriteLine($"max = {arr.Max()}");
 Console.WriteLine($"index of max value = {Array.IndexOf(arr, arr.Max())}");
 
 #endregion
+
+#region Q6
+/**Question 6:
+                Create a function that checks whether a given word (as a string) is a palindrome (same forward
+                and backward). Ignore casing.**/
+
+
+#endregion
